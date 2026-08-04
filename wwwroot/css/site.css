@@ -1,5 +1,12 @@
 html {
-  font-size: 14px;
+  font-size: 14px;        
+}
+
+@font-face {
+    font-family: "SingleGhost";
+    src: url("/fonts/SingleGhost-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @media (min-width: 768px) {
@@ -18,7 +25,13 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    background-image: url("/backgroundimage.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+    
+
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -29,3 +42,19 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+h1 {
+    font-family: SingleGhost, serif;
+}
+
+.welcome-banner {
+    padding: 3rem 1rem;
+    font-family: "SingleGhost", serif;
+    background-color: #000000;
+    color: white;
+    outline:ridge
+}
+
+    .welcome-banner h1 {
+        font-size: 5rem;
+    }
