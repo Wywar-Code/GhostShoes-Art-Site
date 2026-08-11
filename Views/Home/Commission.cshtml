@@ -1,3 +1,44 @@
-﻿@{
+﻿@model GhostShoes_Art_Site.Models.CommissionInquiry
+@{
     ViewData["Title"] = "Commission";
 }
+
+<div class="container py-5">
+    <h1 class="mb-4">Commission Inquiry</h1>
+
+    @if (TempData["CommissionSuccess"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["CommissionSuccess"]
+        </div>
+    }
+
+    <form asp-action="Commission" method="post" class="w-100" style="max-width: 600px;">
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+        <div class="form-floating mb-3">
+            <input asp-for="Name" class="form-control" placeholder="Your name" />
+            <label asp-for="Name">Name</label>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input asp-for="Email" class="form-control" placeholder="you@example.com" />
+            <label asp-for="Email">Email</label>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input asp-for="Subject" class="form-control" placeholder="Subject" />
+            <label asp-for="Subject">Subject (optional)</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <textarea asp-for="Message" class="form-control" placeholder="Describe what you're looking for" style="height: 150px"></textarea>
+            <label asp-for="Message">Details</label>
+            <span asp-validation-for="Message" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-dark">Send Commission</button>
+    </form>
+</div>
