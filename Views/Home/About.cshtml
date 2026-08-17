@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "About";
+
+   //Placeholders
+
+    var photoUrl = "";
+}
+
+<div class="container py-5">
+    <h1 class="mb-4 text-center">About the Artist</h1>
+
+    <div class="row align-items-center g-5">
+        <div class="col-12 col-md-5">
+            @if (string.IsNullOrEmpty(photoUrl))
+            {
+                <div class="d-flex align-items-center justify-content-center bg-secondary text-white rounded"
+                     style="height: 350px;">
+                    <span>Photo Placeholder</span>
+                </div>
+            }
+            else
+            {
+                <img src="@photoUrl" alt="Artist photo" class="img-fluid rounded" />
+            }
+        </div>
+
+        <div class="col-12 col-md-7">
+            <h2>Ghost</h2>
+            <p>
+                Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text.
+            </p>
+            <p>
+                Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text Placeholder text.
+            </p>
+            <ul class="list-unstyled">
+                <li><strong>Based in:</strong> [Your location]</li>
+                <li><strong>Medium:</strong> [e.g. Digital, Acrylic, Watercolor]</li>
+                <li><strong>Available for commissions:</strong> Yes</li>
+            </ul>
+        </div>
+    </div>
+</div>

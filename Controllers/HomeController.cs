@@ -45,6 +45,10 @@ namespace GhostShoes_Art_Site.Controllers
             TempData["CommissionSuccess"] = "Thanks! Your commission inquiry has been sent.";
             return RedirectToAction(nameof(Commission));
         }
+        public IActionResult About()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
