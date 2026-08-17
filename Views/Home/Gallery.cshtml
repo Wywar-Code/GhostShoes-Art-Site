@@ -1,3 +1,46 @@
 ﻿@{
     ViewData["Title"] = "Gallery";
+
+    // Add new pieces here — copy a line, update the details.
+    // Once you have real images, set ImageUrl to the file path (e.g. "/images/piece1.jpg")
+    // and swap the placeholder box below for an <img> tag.
+    var artworks = new[]
+    {
+        new { Title = "Untitled Piece 1", Medium = "Digital", ImageUrl = "" },
+        new { Title = "Untitled Piece 2", Medium = "Digital", ImageUrl = "" },
+        new { Title = "Untitled Piece 3", Medium = "Digital", ImageUrl = "" },
+        new { Title = "Untitled Piece 4", Medium = "Digital", ImageUrl = "" },
+        new { Title = "Untitled Piece 5", Medium = "Digital", ImageUrl = "" },
+        new { Title = "Untitled Piece 6", Medium = "Digital", ImageUrl = "" },
+    };
 }
+
+<div class="container py-5">
+    <h1 class="mb-4 text-center">Gallery</h1>
+
+    <div class="row g-4">
+        @foreach (var art in artworks)
+        {
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card h-100">
+                    @if (string.IsNullOrEmpty(art.ImageUrl))
+                    {
+                        <div class="d-flex align-items-center justify-content-center bg-secondary text-white"
+                             style="height: 250px;">
+                            <span>Artwork Placeholder</span>
+                        </div>
+                    }
+                    else
+                    {
+                        <img src="@art.ImageUrl" class="card-img-top" alt="@art.Title"
+                             style="height: 250px; object-fit: cover;" />
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">@art.Title</h5>
+                        <p class="card-text text-muted">@art.Medium</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
