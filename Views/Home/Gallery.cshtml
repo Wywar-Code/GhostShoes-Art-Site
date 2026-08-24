@@ -1,21 +1,18 @@
 ﻿@{
     ViewData["Title"] = "Gallery";
 
-    // Add new pieces here — copy a line, update the details.
-    // Once you have real images, set ImageUrl to the file path (e.g. "/images/piece1.jpg")
-    // and swap the placeholder box below for an <img> tag.
     var artworks = new[]
     {
-        new { Title = "Untitled Piece 1", Medium = "Digital", ImageUrl = "/tongs.jpg" },
-        new { Title = "Untitled Piece 2", Medium = "Digital", ImageUrl = "/Frankie.jpg" },
-        new { Title = "Untitled Piece 3", Medium = "Digital", ImageUrl = "/Lucky.png" },
-        new { Title = "Untitled Piece 4", Medium = "Digital", ImageUrl = "/Blathers.png" },
-        new { Title = "Untitled Piece 5", Medium = "Digital", ImageUrl = "/CoCo.png" },
-        new { Title = "Untitled Piece 6", Medium = "Digital", ImageUrl = "/Ekko.png" },
-        new { Title = "Untitled Piece 6", Medium = "Digital", ImageUrl = "/Cherry.jpg" },
-        new { Title = "Untitled Piece 6", Medium = "Digital", ImageUrl = "/Clawdeen.png" },
-        new { Title = "Untitled Piece 6", Medium = "Digital", ImageUrl = "/Cleo.png" },
-        new { Title = "Untitled Piece 6", Medium = "Digital", ImageUrl = "/Grizzly.jpg" },
+        new { Title = "Tongs", Medium = "Digital", ImageUrl = "/tongs.jpg" },
+        new { Title = "Frankie", Medium = "Digital", ImageUrl = "/Frankie.jpg" },
+        new { Title = "Lucky", Medium = "Digital", ImageUrl = "/Lucky.png" },
+        new { Title = "Blathers", Medium = "Digital", ImageUrl = "/Blathers.png" },
+        new { Title = "CoCo", Medium = "Digital", ImageUrl = "/CoCo.png" },
+        new { Title = "Ekko", Medium = "Digital", ImageUrl = "/Ekko.jpg" },
+        new { Title = "Cherry", Medium = "Digital", ImageUrl = "/Cherry.jpg" },
+        new { Title = "Clawdeen", Medium = "Digital", ImageUrl = "/Clawdeen.png" },
+        new { Title = "Cleo", Medium = "Digital", ImageUrl = "/Cleo.png" },
+        new { Title = "Grizzly", Medium = "Digital", ImageUrl = "/Grizzly.jpg" },  
     };
 }
 
@@ -37,11 +34,11 @@
                     else
                     {
                         <img src="@art.ImageUrl" class="card-img-top" alt="@art.Title"
-                             style="height: 250px; object-fit: cover;" />
+                             style="width: 100%; height: auto;" />
                     }
-                    <div class="card-body">
-                        <h5 class="card-title">@art.Title</h5>
-                        <p class="card-text text-muted">@art.Medium</p>
+                    <div class="card-body py-2">
+                        <p class="card-text small mb-0">@art.Title</p>
+                        <p class="card-text small text-muted mb-0">@art.Medium</p>
                     </div>
                 </div>
             </div>

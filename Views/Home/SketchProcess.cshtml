@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Sketch Process";
+
+    var videoUrl = "/EkkoDrawing.mov";
+}
+
+<div class="container py-5">
+    <h1 class="mb-4 text-center">Sketch Process</h1>
+
+    <div class="row align-items-center g-5">
+        <div class="col-12 col-md-5">
+            @if (string.IsNullOrEmpty(videoUrl))
+            {
+                <div class="d-flex align-items-center justify-content-center bg-secondary text-white rounded"
+                     style="height: 350px;">
+                    <span>Sketch Process Video Placeholder</span>
+                </div>
+            }
+            else
+            {
+                <video controls class="w-100 rounded">
+                    <source src="@videoUrl" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            }
+        </div>
+
+        <div class="col-12 col-md-7">
+            <h2>Sketch Process</h2>
+        </div>
+    </div>
+</div>
