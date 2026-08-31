@@ -1,5 +1,7 @@
 html {
-  font-size: 14px;        
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;        
 }
 
 @font-face {
@@ -42,17 +44,41 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
-
-h1 {
-    font-family: SingleGhost, serif;
+.AI-clause {
+    padding: 1rem 1rem;
+    background-color: black;
+    outline: ridge;
+    font-family: 'MS Gothic';
+    text-size-adjust: 125%;
 }
+
+.bio-text {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #000000;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-family: 'ms gothic';
+}
+
+.page-header {
+    font-family: "SingleGhost", serif;
+    padding: 3rem 1rem;
+    background-color: #000000;
+    color: white;
+    outline: ridge;
+}
+
+    .page-header h1 {
+        font-size: 4rem;
+    }
 
 .welcome-banner {
     padding: 3rem 1rem;
     font-family: "SingleGhost", serif;
     background-color: #000000;
     color: white;
-    outline:ridge
+    outline: ridge;
 }
 
     .welcome-banner h1 {

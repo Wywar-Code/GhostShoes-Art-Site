@@ -3,7 +3,6 @@
 
     var artworks = new[]
     {
-        new { Title = "Tongs", Medium = "Digital", ImageUrl = "/tongs.jpg" },
         new { Title = "Frankie", Medium = "Digital", ImageUrl = "/Frankie.jpg" },
         new { Title = "Lucky", Medium = "Digital", ImageUrl = "/Lucky.png" },
         new { Title = "Blathers", Medium = "Digital", ImageUrl = "/Blathers.png" },
@@ -12,12 +11,13 @@
         new { Title = "Cherry", Medium = "Digital", ImageUrl = "/Cherry.jpg" },
         new { Title = "Clawdeen", Medium = "Digital", ImageUrl = "/Clawdeen.png" },
         new { Title = "Cleo", Medium = "Digital", ImageUrl = "/Cleo.png" },
-        new { Title = "Grizzly", Medium = "Digital", ImageUrl = "/Grizzly.jpg" },  
+        new { Title = "Grizzly", Medium = "Digital", ImageUrl = "/Grizzly.jpg" },
+        new { Title = "Tongs", Medium = "Digital", ImageUrl = "/tongs.jpg" },
     };
 }
 
 <div class="container py-5">
-    <h1 class="mb-4 text-center">Gallery</h1>
+    <h1 class="page-header mb-4 text-center">Gallery</h1>
 
     <div class="row g-4">
         @foreach (var art in artworks)
